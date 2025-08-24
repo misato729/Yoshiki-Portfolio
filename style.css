@@ -1,5 +1,7 @@
 @charset "UTF-8";
+
 /* ========== 共通 ========== */
+
 .site-header {
     background: #fff;
     border-bottom: 1px solid #ccc;
@@ -9,8 +11,9 @@
     padding: 1rem 0;
     position: relative;
     z-index: 1000;
-  }
-  .header-bg {
+}
+
+.header-bg {
     position: absolute;
     top: 0;
     left: 0;
@@ -20,39 +23,46 @@
     background-position: center;
     opacity: 0.3;
     z-index: 0;
-    pointer-events: none; /* ← これが重要！ */
-  }
-  
-  .site-header .wrapper {
+    pointer-events: none;
+    /* ← これが重要！ */
+}
+
+.site-header .wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-  }
-  
-  .site-title {
+}
+
+.site-title {
     font-size: 1.8rem;
     margin: 0;
-  }
-  
-  .wrapper {
+}
+
+.wrapper {
     max-width: 960px;
     margin: 0 auto;
     padding: 2rem 1rem;
-  }
-  body {
+}
+
+body {
     background-color: #F8F2F7;
     font-family: 'M PLUS 1p', sans-serif;
-  }
-    /* 
+}
+
+
+/* 
     =========================================== Header ====================================================
     */
+
+
 /* ========== ナビゲーション（PC） ========== */
+
 .nav-main {
     display: flex;
     align-items: center;
     font-size: 1.5rem;
-  }
+}
 
 .nav-main ul {
     display: flex;
@@ -61,7 +71,6 @@
     margin: 0;
     padding: 0;
 }
-  
 
 .nav-main ul li a {
     text-decoration: none;
@@ -71,129 +80,145 @@
 }
 
 .nav-main ul li a:hover {
-  color: #6a0dad; /* ホバー時の色 */
+    color: #6a0dad;
+    /* ホバー時の色 */
 }
+
 
 /* ========== ハンバーガー（デフォルト非表示） ========== */
+
 .menu-button {
-  display: none;
+    display: none;
 }
 
+
 /* ========== モバイルナビ（スライド＋右寄せ） ========== */
+
 .mobile-nav {
-  position: fixed;
-  top: -100%;
-  left: 0;
-  width: 100%;
-  background: #fff;
-  padding: 1.5rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: top 0.5s ease;
-  z-index: 1000;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: top 0.5s ease;
+    z-index: 1000;
 }
 
 .mobile-nav.active {
-  top: 0;
+    top: 0;
 }
 
+
 /* モバイルナビのリストを右寄せかつ余白付きに */
+
 .mobile-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: fit-content;
-  margin-left: auto;
-  padding-right: 11rem; /* ← ここがポイント（調整済） */
-  box-sizing: border-box;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: fit-content;
+    margin-left: auto;
+    padding-right: 11rem;
+    /* ← ここがポイント（調整済） */
+    box-sizing: border-box;
 }
 
 .mobile-nav li {
-  margin: 0.5rem 0;
+    margin: 0.5rem 0;
 }
 
 .mobile-nav li a {
-  color: #4b0082;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 1.2rem;
+    color: #4b0082;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.2rem;
 }
+
 
 /* ========== スマホサイズで切り替え ========== */
+
 @media (max-width: 768px) {
-  .nav-main {
-    display: none;
-  }
-
-  .menu-button {
-    display: inline-block;
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 0.5rem;
-    font-size: 1.5rem;
-    cursor: pointer;
-    z-index: 1001;
-  }
-
-  .site-title {
-    font-size: 1.2rem;
-    width: 100%;
-    text-align: left;
-    padding-right: 3rem; /* ハンバーガーと被らないように */
-  }
+    .nav-main {
+        display: none;
+    }
+    .menu-button {
+        display: inline-block;
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        background: white;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 0.5rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        z-index: 1001;
+    }
+    .site-title {
+        font-size: 1.2rem;
+        width: 100%;
+        text-align: left;
+        padding-right: 3rem;
+        /* ハンバーガーと被らないように */
+    }
 }
 
 
-    /* 
+/* 
     ============================================= TOP =============================================
      */
+
+
 /* ========== Hero Section ========== */
+
 .hero {
     text-align: center;
     padding: 2rem 1rem;
-  }
+}
 
-  .hero span{
+.hero span {
     font-size: 1.6rem;
-  }
-  
-  .hero h1 {
+}
+
+.hero h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
-  }
-  
-  .hero p {
+}
+
+.hero p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
     text-align: center;
     color: #6a0dad;
-  }
-
-/* ========== About Section ========== */
-.detail{
-  text-align: right;
 }
 
+
+/* ========== About Section ========== */
+
+.detail {
+    text-align: right;
+}
+
+
 /* ========== Works Section ========== */
+
 #works {
     text-align: left;
-  }
-  
-  .works-nav {
+}
+
+.works-nav {
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
-  }
-  
-  .works-nav span {
+}
+
+.works-nav span {
     font-size: 1.1rem;
     font-weight: bold;
-  }
-  
-  .works-cards {
+}
+
+.works-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
@@ -201,9 +226,9 @@
     max-width: 960px;
     margin-left: auto;
     margin-right: auto;
-  }
-  
-  .work-card {
+}
+
+.work-card {
     max-width: 288px;
     display: flex;
     flex-direction: column;
@@ -213,28 +238,29 @@
     padding: 1.5rem 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    height: 100%; /* ✅ これだけでは不足！ */
-    align-self: stretch; /* ✅ これで高さが統一される */
-  }
+    height: 100%;
+    /* ✅ これだけでは不足！ */
+    align-self: stretch;
+    /* ✅ これで高さが統一される */
+}
 
-  .work-card p {
+.work-card p {
     margin-top: 0.5rem;
     margin-bottom: 1rem;
     flex-grow: 1;
-  }
-  
+}
 
-  .work-card a {
+.work-card a {
     margin-top: 1rem;
-  }
-  
-  .work-category{
-    padding:1rem;
+}
+
+.work-category {
+    padding: 1rem;
     font-weight: bold;
     font-size: large;
-  }
-  
-  .thumbnail {
+}
+
+.thumbnail {
     border-radius: 8px;
     display: flex;
     justify-content: center;
@@ -242,341 +268,374 @@
     font-weight: bold;
     font-size: 1rem;
     margin-bottom: 1rem;
-  }
-  
-  .work-card h3 {
+}
+
+.work-card h3 {
     font-size: 1.1rem;
     margin: 0.5rem 0;
-  }
-  
-  .work-card p {
+}
+
+.work-card p {
     font-size: 0.95rem;
     line-height: 1.5;
     color: #333;
-  }
-  
-  /* CTAリンク */
-  .link {
+}
+
+
+/* CTAリンク */
+
+.link {
     margin-top: 1rem;
-  }
-  
-  .link a {
+}
+
+.link a {
     color: #e91e63;
     font-weight: bold;
     font-size: 1.1rem;
     text-decoration: none;
-  }
-
-/* 横スクロール対応（スマホ用） */
-@media screen and (max-width: 768px) {
-  .scroll-container {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .works-cards {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 1rem;
-    padding: 1rem;
-  }
-
-  .work-card {
-    flex: 0 0 80%;
-    scroll-snap-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    min-height: 450px; /* ✅ お好みで調整 */
-    box-sizing: border-box;
-  }
 }
 
 
-  
+/* 横スクロール対応（スマホ用） */
+
+@media screen and (max-width: 768px) {
+    .scroll-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .works-cards {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    .work-card {
+        flex: 0 0 80%;
+        scroll-snap-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        min-height: 450px;
+        /* ✅ お好みで調整 */
+        box-sizing: border-box;
+    }
+}
+
+
 /* ========== Contact Section ========== */
- /* メール */
-.email{
+
+
+/* メール */
+
+.email {
     text-align: center;
     margin-top: 2rem;
-  }
-  
-  .email a {
+}
+
+.email a {
     color: #4b0082;
     font-size: 1.2rem;
     text-decoration: none;
-  }
-  
-  .email a:hover {
-    color: #6a0dad; /* ホバー時の色 */
-  }
-  
-  /* SNSアイコン */
-.sns-icons{
+}
+
+.email a:hover {
+    color: #6a0dad;
+    /* ホバー時の色 */
+}
+
+
+/* SNSアイコン */
+
+.sns-icons {
     display: flex;
     gap: 4rem;
     margin-top: 2rem;
     align-items: center;
     justify-content: center;
-  }
-  
-  .sns-icons a {
+}
+
+.sns-icons a {
     text-decoration: none;
     color: #4b0082;
     font-size: 1.5rem;
-  }
-  
-  .sns-icons a:hover {
-    color: #6a0dad; /* ホバー時の色 */
-  }
-  
-.sns-name{
+}
+
+.sns-icons a:hover {
+    color: #6a0dad;
+    /* ホバー時の色 */
+}
+
+.sns-name {
     font-size: 1.2rem;
     margin-top: 0.5rem;
     text-align: center;
     justify-content: end;
-  }
-
-/* レスポンシブ対応 */
-@media screen and (max-width: 768px) {
-  #contact{
-    display: flex;
-    flex-direction: column;
-    align-items: left;    
-  }
-  .sns-icons {
-    background-color: plum;
-    padding: 1rem;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    gap: 2rem;
-    scroll-snap-type: x mandatory;
-    width: max-content; 
-  }
 }
 
-    /* 
+
+/* レスポンシブ対応 */
+
+@media screen and (max-width: 768px) {
+    #contact {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+    }
+    .sns-icons {
+        background-color: plum;
+        padding: 1rem;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 2rem;
+        scroll-snap-type: x mandatory;
+        width: max-content;
+    }
+}
+
+
+/* 
     =========================================== About =================================================
     */
 
+
 /* ============Profile============ */
+
 .profile {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  margin-bottom: 3rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 3rem;
 }
 
 .profile-image img {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  object-fit: cover;
-  background: #ccc;
-  flex-shrink: 0;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #ccc;
+    flex-shrink: 0;
 }
 
 .profile-text {
-  flex: 1;
-  min-width: 200px;
+    flex: 1;
+    min-width: 200px;
 }
 
 .profile-text h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
+
 /* =================Skill Block================== */
+
 .skill-block {
-  margin-bottom: 3rem;
+    margin-bottom: 3rem;
 }
 
 .skill-block h3 {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
 }
 
 .skill-content {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
 .skill-bars {
-  flex: 1 1 50%;
-  min-width: 250px;
+    flex: 1 1 50%;
+    min-width: 250px;
 }
 
 .skill-description {
-  flex: 1 1 40%;
-  min-width: 200px;
+    flex: 1 1 40%;
+    min-width: 200px;
 }
 
+
 /* ===============Skill Bar Row================ */
+
 .skill-row {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 .skill-row span {
-  display: inline-block;
-  width: 100px;
-  font-weight: bold;
+    display: inline-block;
+    width: 150px;
+    font-weight: bold;
 }
 
+
 /* バーのベース */
+
 .bar {
-  flex: 1;
-  height: 10px;
-  background: #eee;
-  position: relative;
-  border-radius: 5px;
-  --bar-width: 0%;
+    flex: 1;
+    height: 10px;
+    background: #eee;
+    position: relative;
+    border-radius: 5px;
+    --bar-width: 0%;
 }
 
 .bar::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 10px;
-  width: var(--bar-width);
-  background-color: currentColor;
-  transition: width 0.5s ease;
-  border-radius: 5px;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10px;
+    width: var(--bar-width);
+    background-color: currentColor;
+    transition: width 0.5s ease;
+    border-radius: 5px;
 }
+
 
 /* 色ごとにカラー指定 */
+
 .bar-orange::after {
-  color: orange;
-}
-.bar-green::after {
-  color: seagreen;
-}
-.bar-purple::after {
-  color: purple;
+    color: orange;
 }
 
+.bar-green::after {
+    color: seagreen;
+}
+
+.bar-purple::after {
+    color: purple;
+}
+
+
 /* ================Personality============= */
+
 #personality {
-  margin-top: 3rem;
-  padding: 1rem 0;
+    margin-top: 3rem;
+    padding: 1rem 0;
 }
 
 #personality h2 {
-  font-size: 2rem;
-  margin-bottom : left;
+    font-size: 2rem;
+    margin-bottom: left;
 }
 
 .personality-item {
-  margin-bottom: 2rem;
-  padding: 1rem;
-  background-color: #f9f9f9;
-  border-left: 6px solid  purple;
-  border-radius: 6px;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-left: 6px solid purple;
+    border-radius: 6px;
 }
 
 .personality-item h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  color: #333;
-  text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+    text-align: center;
 }
 
 .personality-item p {
-  line-height: 1.8;
-  color: #555;
-  font-size: 0.95rem;
-  padding: 0rem 1rem;
+    line-height: 1.8;
+    color: #555;
+    font-size: 0.95rem;
+    padding: 0rem 1rem;
 }
 
 
 /* ============Responsive=========== */
+
 @media screen and (max-width: 768px) {
-  .profile {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .skill-content {
-    flex-direction: column;
-  }
-
-  .skill-bars,
-  .skill-description {
-    flex: 1 1 100%;
-  }
+    .profile {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .skill-content {
+        flex-direction: column;
+    }
+    .skill-bars,
+    .skill-description {
+        flex: 1 1 100%;
+    }
 }
 
 
-    /* 
+/* 
     =========================================== Works（ /Works ） =================================================
     */
+
+
 /* ===== Worksセクション共通 ===== */
+
+
 /* 共通 */
+
 .genre-tabs {
-  margin-bottom: 1.5rem;
-  padding: 0 1rem;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
 }
 
 .genre-tabs ul {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  border-bottom: 2px solid #ddd;
-  flex-wrap: nowrap;
-  white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    border-bottom: 2px solid #ddd;
+    flex-wrap: nowrap;
+    white-space: nowrap;
 }
 
 .genre-tabs li a {
-  display: inline-block;
-  padding: 0.5rem 1.2rem;
-  border: 1px solid #aaa;
-  border-bottom: none;
-  border-radius: 8px 8px 0 0;
-  background: #fff;
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  font-size: 0.9rem;
-  min-width: 80px;
-  text-align: center;
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    border: 1px solid #aaa;
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    background: #fff;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 0.9rem;
+    min-width: 80px;
+    text-align: center;
 }
 
 .genre-tabs li a.active {
-  background: black;
-  color: white;
+    background: black;
+    color: white;
 }
+
 
 /* ✅ スマホ時に全体を縮小して1行に収める */
+
 @media screen and (max-width: 768px) {
-  .genre-tabs ul {
-    transform: scale(0.8); 
-    transform-origin: center;
-  }
+    .genre-tabs ul {
+        transform: scale(0.8);
+        transform-origin: center;
+    }
 }
+
 @media screen and (max-width: 400px) {
-  .genre-tabs ul {
-    transform: scale(0.7); 
-    transform-origin: center;
-  }
+    .genre-tabs ul {
+        transform: scale(0.7);
+        transform-origin: center;
+    }
 }
 
 
+/* ========== Archive Works ========== */
 
-  /* ========== Archive Works ========== */
-  .works-cards-archive {
+.works-cards-archive {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 4rem 2rem;
@@ -584,132 +643,132 @@
     margin-left: auto;
     margin-right: auto;
     padding: 0 1rem;
-  }
-  
-  
-  
+}
+
 .thumbnail img {
     max-width: 266.67px;
     max-height: 150px;
     width: auto;
     height: auto;
-    object-fit: contain; 
+    object-fit: contain;
     display: block;
     margin: 0 auto;
     border-radius: 8px;
-  }
+}
 
-  .thumbnail.thumb-16x9 {
+.thumbnail.thumb-16x9 {
     width: 100%;
     aspect-ratio: 16 / 9;
     overflow: hidden;
     border-radius: 8px;
     display: flex;
-    justify-content: center; /* ✅ 中央寄せ */
-  }
-  
-  .thumbnail.thumb-16x9 img {
+    justify-content: center;
+    /* ✅ 中央寄せ */
+}
+
+.thumbnail.thumb-16x9 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-  }
-  
-  
-  /* タイトル */
-  .work-card h2 {
+}
+
+
+/* タイトル */
+
+.work-card h2 {
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
-  }
-  
-  /* リンク */
-  .work-card a {
+}
+
+
+/* リンク */
+
+.work-card a {
     font-weight: bold;
     color: #e91e63;
     text-decoration: none;
     margin-top: auto;
-  }
-
-/* Responsive */
-@media screen and (max-width: 768px) {
-  .works-cards-archive {
-    flex-direction: column;
-    align-items: center;
-    padding: 0 1rem;
-  }
-
-  .works-cards-archive .work-card {
-    width: 100%;
-    max-width: 320px;
-    
-  }
-
-  .works-cards-archive .thumbnail.thumb-16x9 {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-  }
-
-  .works-cards-archive .thumbnail.thumb-16x9 img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-  }
-  .thumbnail {
-    width: 267px;
-    height: 150px;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto 1rem; /* ← 中央揃えの決め手 */
-    overflow: hidden;
-  }
-  
-  .thumbnail img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;   /* ← 中央でトリミング */
-    object-position: center;
-    display: block;
-  }
-  
 }
 
-    /* 
+
+/* Responsive */
+
+@media screen and (max-width: 768px) {
+    .works-cards-archive {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 1rem;
+    }
+    .works-cards-archive .work-card {
+        width: 100%;
+        max-width: 320px;
+    }
+    .works-cards-archive .thumbnail.thumb-16x9 {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+    }
+    .works-cards-archive .thumbnail.thumb-16x9 img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+    }
+    .thumbnail {
+        width: 267px;
+        height: 150px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 1rem;
+        /* ← 中央揃えの決め手 */
+        overflow: hidden;
+    }
+    .thumbnail img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* ← 中央でトリミング */
+        object-position: center;
+        display: block;
+    }
+}
+
+
+/* 
     =========================================== Single Works =================================================
     */
 
-    .post-meta {
-      font-size: 0.9rem;
-      color: #666;
-      margin-bottom: 1.5rem;
-    }
-    
-    .post-meta .post-date {
-      margin: 0.2rem 0;
-      display: flex;
-      align-items: center;
-    }
-    
-    .post-meta .label {
-      font-weight: bold;
-      margin-right: 0.3em;
-      color: #444;
-    }
-    
-    .post-categories {
-      margin-top: 0.5rem;
-    }
-    
-    .category-label {
-      display: inline-block;
-      background-color: purple;
-      color: whitesmoke;
-      padding: 0.2em 0.6em;
-      border-radius: 9999px;
-      font-size: 0.8rem;
-      margin-right: 0.4em;
-      margin-top: 0.3em;
-    }
-    
+.post-meta {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.post-meta .post-date {
+    margin: 0.2rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.post-meta .label {
+    font-weight: bold;
+    margin-right: 0.3em;
+    color: #444;
+}
+
+.post-categories {
+    margin-top: 0.5rem;
+}
+
+.category-label {
+    display: inline-block;
+    background-color: purple;
+    color: whitesmoke;
+    padding: 0.2em 0.6em;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    margin-right: 0.4em;
+    margin-top: 0.3em;
+}
