@@ -6,7 +6,6 @@ get_header();
 ?>
 
 <main class="wrapper" id="about-page">
-<<<<<<< HEAD
 <h1>About</h1>
   <!-- About -->
   <section>
@@ -42,10 +41,9 @@ get_header();
         'color' => 'orange',
         'skills' => [
           ['Figma', '80%'],
-          ['Photoshop', '20%'],
-          ['Illustrator', '20%'],
-          ['HTML', '60%'],
-          ['CSS', '60%'],
+          ['HTML', '80%'],
+          ['CSS', '80%'],
+          ['TailWind CSS', '20%'],
         ],
         'desc' => '主にFigmaでデザインを行っています。コンポーネントやオートレイアウトを使いこなし、UIにこだわりつつ効率的にデザインを制作します。HTMLとCSSを使ってデザインを正しく再現することもできます。'
       ],
@@ -53,14 +51,15 @@ get_header();
         'title' => 'Development Skills',
         'color' => 'green',
         'skills' => [
-          ['JavaScript', '40%'],
-          ['TypeScript', '20%'],
+          ['JavaScript', '60%'],
+          ['TypeScript', '60%'],
           ['Vue.js', '60%'],
-          ['PHP', '40%'],
-          ['Laravel', '20%'],
-          ['WordPress', '40%'],
+          ['React/Next.js', '40%'],
+          ['PHP(Laravel)', '60%'],
+          ['Python', '40%'],
+          ['WordPress', '60%'],
         ],
-        'desc' => 'フロントエンドではWebアプリ開発でTypeScriptとVue.jsを使った経験があります。TypeScriptはまだ勉強中です。バックエンドではPHP（WordPress）とLaravel（Webアプリ）を使った開発経験があります。'
+        'desc' => 'フロントエンドを中心にいろいろ触っています。Vue.js + Laravel のアプリ開発が一番力を入れたところで、 最近はReact/Next.jsやWordPressにも挑戦しています。'
       ],
       [
         'title' => 'Composing Music Skills',
@@ -126,14 +125,6 @@ get_header();
   </div>
 </section>
 
-=======
-    <div class="container">
-        <h1>About Us</h1>
-        <p>This page provides information about our company and our mission.</p>
-        <p>We are dedicated to providing the best service possible.</p>
-        <p>Contact us for more information or if you have any questions.</p>
-    </div>
->>>>>>> 052d7bba2f46ad0bd3d12c71bc9851c44a9af515
 </main>
 
 <?php get_footer(); ?>
