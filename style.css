@@ -286,6 +286,7 @@ body {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     line-clamp: 3;
+    max-height: 4.5em;
     overflow: hidden;
     text-align: left;
 }
