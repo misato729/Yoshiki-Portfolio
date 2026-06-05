@@ -5,7 +5,7 @@
   <!-- Hero -->
   <section class="hero">
     <h1>Ohno Yoshiki <span>(a.k.a. misato)</span>'s<br>Portfolio Site</h1>
-    <p class="catchcopy"><strong>デザイン</strong> と <strong>Webアプリ</strong> と <strong>音楽</strong> をつくる人。</p>
+    <p class="catchcopy"><strong>Webアプリ</strong> と <strong>デザイン</strong> と <strong>音楽</strong> をつくる人。</p>
   </section>
 
   <!-- About -->
@@ -19,11 +19,9 @@
         <h3>大野 佳樹 / a.k.a. misato</h3>
         <p>
           おおの よしき　埼玉県美里町出身。1998年7月生まれ。<br>
-          早稲田大学教育学部国語国文学科卒業。<br>
-          現在は大手事業会社で社内システムの開発・保守のディレクションを行う。<br>
-          開発経験もないままディレクターをしていることに疑問を感じ、独学でデザインやアプリ開発を行っている。<br>
-          また、学生時代からmisato名義で作曲活動を行なっている。<br>
-          ミュージックスクールウッド作曲本科卒業。
+          2024年3月に早稲田大学教育学部国語国文学科を卒業し、大手事業会社に新卒入社。<br>
+          現在は社内システムの開発・保守のディレクションを行う傍ら、独学で個人開発を行っている。<br>
+          現職と個人開発を経験し、ディレクションよりも開発の方が楽しいことに気づき、現在は開発エンジニアを目指して転職活動中。<br>
         </p>
         <p class="link detail"><a href="/about">詳しくはこちら</a></p>
       </div>
