@@ -281,6 +281,15 @@ body {
     color: #333;
 }
 
+.work-card-excerpt {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-clamp: 3;
+    overflow: hidden;
+    text-align: left;
+}
+
 
 /* CTAリンク */
 

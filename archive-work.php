@@ -81,7 +81,7 @@ $current = get_query_var('genre');
         <?php endif; ?>
 
         <h2><?php the_title(); ?></h2>
-        <p><?php echo wp_trim_words(get_the_content(), 100); ?></p>
+        <p class="work-card-excerpt"><?php echo esc_html(wp_strip_all_tags(strip_shortcodes(get_the_content()))); ?></p>
         <a href="<?php the_permalink(); ?>">詳しく見る</a>
       </article>
     <?php endwhile; else : ?>
