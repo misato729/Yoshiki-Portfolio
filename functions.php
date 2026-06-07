@@ -2,7 +2,64 @@
 /**
  * テーマの基本設定
  */
- 
+
+/**
+ * 公開サイトのホストかどうかを判定する
+ */
+function yoshiki_portfolio_is_public_host() {
+  if (empty($_SERVER['HTTP_HOST'])) {
+    return false;
+  }
+
+  $host = strtolower(wp_unslash($_SERVER['HTTP_HOST']));
+  $host = preg_replace('/:\d+$/', '', $host);
+
+  return in_array($host, ['yoshiki-portfolio.com', 'www.yoshiki-portfolio.com'], true);
+}
+
+/**
+ * 公開サイトへのHTTPアクセスをHTTPSへ恒久転送する
+ */
+function yoshiki_portfolio_enforce_https() {
+  if (!yoshiki_portfolio_is_public_host() || is_ssl()) {
+    return;
+  }
+
+  $request_uri = isset($_SERVER['REQUEST_URI'])
+    ? wp_unslash($_SERVER['REQUEST_URI'])
+    : '/';
+  $redirect_url = 'https://yoshiki-portfolio.com' . $request_uri;
+
+  wp_safe_redirect($redirect_url, 301, 'Yoshiki Portfolio HTTPS Redirect');
+  exit;
+}
+add_action('init', 'yoshiki_portfolio_enforce_https', 0);
+
+/**
+ * 公開サイトでWordPressが生成するURLをHTTPSに統一する
+ */
+function yoshiki_portfolio_force_https_url($url) {
+  if (!yoshiki_portfolio_is_public_host()) {
+    return $url;
+  }
+
+  return set_url_scheme($url, 'https');
+}
+add_filter('option_home', 'yoshiki_portfolio_force_https_url');
+add_filter('option_siteurl', 'yoshiki_portfolio_force_https_url');
+
+/**
+ * HTTPS強制後の公開サイトにHSTSを付与する
+ */
+function yoshiki_portfolio_send_security_headers() {
+  if (!yoshiki_portfolio_is_public_host() || !is_ssl()) {
+    return;
+  }
+
+  header('Strict-Transport-Security: max-age=31536000; includeSubDomains');
+}
+add_action('send_headers', 'yoshiki_portfolio_send_security_headers');
+
 // CSSとJSを読み込む
 function my_theme_enqueue_assets() {
   // CSS（style.css）を読み込み
