@@ -17,13 +17,12 @@ get_header();
       <div class="profile-text">
         <h3>大野 佳樹 / a.k.a. misato</h3>
         <p>
-          おおの よしき　埼玉県美里町出身。1998年7月生まれ。<br>
-          2024年3月に早稲田大学教育学部国語国文学科を卒業し、大手事業会社に新卒入社。<br>
-          現在は社内SEとして開発・保守のディレクションを行う傍ら、独学で個人開発を行っている。<br>
+          おおの よしき 埼玉県美里町出身。1998年7月生まれ。<br>
+          2024年3月に早稲田大学教育学部国語国文学科を卒業し、大手事業会社に社内SEとして新卒入社。<br>
+          現在は社内システムの開発・保守のディレクションを行う傍ら、独学で個人開発を行っている。<br>
           現職と個人開発を経験し、ディレクションよりも開発の方が楽しいことに気づき、現在は開発エンジニアを目指して転職活動中。<br>
-          資格は応用情報技術者試験合格、AWS SAA、AWS DVA、TOEIC L&R 790点、歴史能力検定 世界史2級・日本史2級、世界遺産検定2級。<br>
-          また、学生時代からmisato名義で作曲活動を行なっている。ミュージックスクールウッド作曲本科卒業。<br>
-          趣味は音ゲーと読書と旅行。<br>
+          また、学生時代からmisato名義で作曲活動を行なっている。ミュージックスクールウッド作曲本科卒業(2021年4月入学生)。<br>
+          趣味は音ゲー、読書、歴史、旅行（ゲーセン・史跡巡り）。<br>
           推しは「ぼっち・ざ・ろっく！」の山田リョウ。<br>
         </p>
       </div>
@@ -51,7 +50,8 @@ get_header();
         'title' => 'Development Skills',
         'color' => 'green',
         'skills' => [
-          ['JavaScript/TypeScript', '60%'],
+          ['JavaScript', '60%'],
+          ['TypeScript', '60%'],
           ['Vue.js', '60%'],
           ['React/Next.js', '40%'],
           ['PHP(Laravel)', '60%'],
@@ -59,7 +59,7 @@ get_header();
           ['WordPress', '60%'],
           ['SQL', '40%'],
         ],
-        'desc' => 'フロントエンド、バックエンドともにある程度触っています。VueとLaravelが最も得意で、React/Next.jsも少しだけ触れたことがあります。バックエンドももう1言語勉強したいところです。'
+        'desc' => 'フロントエンド、バックエンドともにある程度触っています。VueとLaravelが最も得意で、React/Next.jsも少しだけ触れたことがあります。次の機会ではRuby on Railsを勉強しようと思っています。'
       ],
       [
         'title' => 'Composing Music Skills',
@@ -94,6 +94,20 @@ get_header();
       </div>
     <?php endforeach; ?>
   </section>
+
+  <section id="qualification">
+  <h2>Qualification</h2>
+  <ul class="qualification-list">
+    <li>2022/3 TOEIC Listening & Reading 790点</li>
+    <li>2022/11 基本情報技術者試験 合格</li>
+    <li>2022/12 応用情報技術者試験 合格</li>
+    <li>2024/12 歴史能力検定 世界史2級 合格</li>
+    <li>2025/12 歴史能力検定 日本史2級 合格</li>
+    <li>2026/3 世界遺産検定2級 合格</li>
+    <li>2026/4 AWS Certified Solutions Architect - Associate</li>
+    <li>2026/4 AWS Certified Developer - Associate</li>
+  </ul>
+</section>
 
   <!-- Personality -->
   <section id="personality">
