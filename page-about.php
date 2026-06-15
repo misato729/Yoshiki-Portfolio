@@ -98,7 +98,7 @@ get_header();
   <section id="qualification">
   <h2>Qualification</h2>
   <ul class="qualification-list">
-    <li>2022/3 TOEIC Listening & Reading 790点</li>
+    <li>2022/3 TOEIC Listening & Reading Test 790点</li>
     <li>2022/11 基本情報技術者試験 合格</li>
     <li>2022/12 応用情報技術者試験 合格</li>
     <li>2024/12 歴史能力検定 世界史2級 合格</li>
