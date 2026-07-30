@@ -17,27 +17,32 @@ foreach ($desired_order as $slug) {
 $current = get_query_var('genre');
 ?>
 
-<main class="wrapper">
-  <h1>Works</h1>
+<main class="wrapper works-archive-page">
+  <header class="works-archive-header">
+    <h1>Works</h1>
 
-  <!-- タブ切り替え -->
-  <div class="genre-tabs">
-    <ul>
-      <li>
-        <a href="<?php echo get_post_type_archive_link('work'); ?>" class="<?php if (!$current) echo 'active'; ?>">
-          All
-        </a>
-      </li>
-      <?php foreach ($genres as $genre) : ?>
+    <!-- タブ切り替え -->
+    <nav class="genre-tabs" aria-label="作品カテゴリー">
+      <ul>
         <li>
-          <a href="<?php echo get_post_type_archive_link('work') . '?genre=' . $genre->slug; ?>"
-             class="<?php echo ($current === $genre->slug) ? 'active' : ''; ?>">
-            <?php echo esc_html($genre->name); ?>
+          <a href="<?php echo esc_url(get_post_type_archive_link('work')); ?>"
+             class="<?php if (!$current) echo 'active'; ?>"
+             <?php if (!$current) echo 'aria-current="page"'; ?>>
+            All
           </a>
         </li>
-      <?php endforeach; ?>
-    </ul>
-  </div>
+        <?php foreach ($genres as $genre) : ?>
+          <li>
+            <a href="<?php echo esc_url(get_post_type_archive_link('work') . '?genre=' . $genre->slug); ?>"
+               class="<?php echo ($current === $genre->slug) ? 'active' : ''; ?>"
+               <?php if ($current === $genre->slug) echo 'aria-current="page"'; ?>>
+              <?php echo esc_html($genre->name); ?>
+            </a>
+          </li>
+        <?php endforeach; ?>
+      </ul>
+    </nav>
+  </header>
 
   <!-- 投稿一覧 -->
   <div class="works-cards-archive">
@@ -76,16 +81,29 @@ $current = get_query_var('genre');
           }
         ?>
 
-        <?php if ($thumbnail_html): ?>
-          <div class="thumbnail thumb-16x9"><?php echo $thumbnail_html; ?></div>
+        <?php if ($thumbnail_html) : ?>
+          <a class="work-card-thumbnail-link" href="<?php the_permalink(); ?>" aria-label="<?php echo esc_attr(get_the_title()); ?>">
+            <div class="thumbnail thumb-16x9"><?php echo $thumbnail_html; ?></div>
+          </a>
         <?php endif; ?>
 
-        <h2><?php the_title(); ?></h2>
+        <?php
+          $work_genres = get_the_terms(get_the_ID(), 'genre');
+          if ($work_genres && !is_wp_error($work_genres)) :
+        ?>
+          <div class="work-card-genres">
+            <?php foreach ($work_genres as $work_genre) : ?>
+              <span><?php echo esc_html($work_genre->name); ?></span>
+            <?php endforeach; ?>
+          </div>
+        <?php endif; ?>
+
+        <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
         <p class="work-card-excerpt"><?php echo esc_html(wp_strip_all_tags(strip_shortcodes(get_the_content()))); ?></p>
-        <a href="<?php the_permalink(); ?>">詳しく見る</a>
+        <a class="work-card-link" href="<?php the_permalink(); ?>">詳しく見る</a>
       </article>
     <?php endwhile; else : ?>
-      <p>作品が見つかりませんでした。</p>
+      <p class="works-empty">作品が見つかりませんでした。</p>
     <?php endif; wp_reset_postdata(); ?>
   </div>
 </main>

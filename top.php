@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main class="wrapper">
+<main class="wrapper top-page">
 
   <!-- Hero -->
   <section class="hero">
@@ -19,9 +19,10 @@
         <h3>大野 佳樹 / a.k.a. misato</h3>
         <p>
           おおの よしき 埼玉県美里町出身。1998年7月生まれ。<br>
-          2024年3月に早稲田大学教育学部国語国文学科を卒業し、大手事業会社に社内SEとして新卒入社。<br>
-          現在は社内システムの開発・保守のディレクションを行う傍ら、独学で個人開発を行っている。<br>
-          現職と個人開発を経験し、ディレクションよりも開発の方が楽しいことに気づき、現在は開発エンジニアを目指して転職活動中。<br>
+          2020年4月に早稲田大学教育学部国語国文学科に入学し、2024年3月に卒業。<br>
+          在学中は作曲、塾のアルバイト、情報の勉強、近現代文学の研究などに熱中してきた。<br>
+          2024年4月に株式会社マイナビに社内SEとして新卒入社し、2026年6月退職。<br>
+          現在は進路模索中。<br>
         </p>
         <p class="link detail"><a href="/about">詳しくはこちら</a></p>
       </div>
@@ -80,7 +81,7 @@
       </div>
       <div class="sns-icon">
         <a href="https://qiita.com/misato729" >
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/qiita-white-icon.png" alt="Qiitaアイコン"></a>
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/qiita-icon.png" alt="Qiitaアイコン"></a>
           <p class="sns-name">Qiita</p>
       </div> 
       <div class="sns-icon">
@@ -95,7 +96,7 @@
       </div>
       <div class="sns-icon">
         <a href="https://soundcloud.com/user-84160300" >
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/soundcloud.jpg" alt="SoundCloudアイコン"></a>
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/soundcloud-orange.png" alt="SoundCloudアイコン"></a>
           <p class="sns-name">SoundCloud</p>
       </div>
     </div>
