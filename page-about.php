@@ -18,10 +18,9 @@ get_header();
         <h3>大野 佳樹 / a.k.a. misato</h3>
         <p>
           おおの よしき 埼玉県美里町出身。1998年7月生まれ。<br>
-          2024年3月に早稲田大学教育学部国語国文学科を卒業し、大手事業会社に社内SEとして新卒入社。<br>
-          現在は社内システムの開発・保守のディレクションを行う傍ら、独学で個人開発を行っている。<br>
-          現職と個人開発を経験し、ディレクションよりも開発の方が楽しいことに気づき、現在は開発エンジニアを目指して転職活動中。<br>
-          また、学生時代からmisato名義で作曲活動を行なっている。ミュージックスクールウッド作曲本科卒業(2021年4月入学生)。<br>
+          早稲田大学教育学部国語国文学科卒業後、株式会社マイナビに社内SEとして新卒入社し、社内システムの開発・保守のディレクションに従事。<br>
+          2026年6月に退職し、現在は進路を模索中。<br>
+          また、学生時代からmisato名義で作曲活動を行なっている。ミュージックスクールウッド作曲本科卒業(2021年4月~2022年3月)。<br>
           趣味は音ゲー、読書、歴史、旅行（ゲーセン・史跡巡り）。<br>
           推しは「ぼっち・ざ・ろっく！」の山田リョウ。<br>
         </p>
@@ -98,14 +97,15 @@ get_header();
   <section id="qualification">
   <h2>Qualification</h2>
   <ul class="qualification-list">
-    <li>2022/3 TOEIC Listening & Reading Test 790点</li>
+    <li>2017/2 実用英語技能検定 準1級 合格</li>
+    <li>2022/3 TOEIC Listening & Reading Test 790点 取得</li>
     <li>2022/11 基本情報技術者試験 合格</li>
     <li>2022/12 応用情報技術者試験 合格</li>
     <li>2024/12 歴史能力検定 世界史2級 合格</li>
     <li>2025/12 歴史能力検定 日本史2級 合格</li>
     <li>2026/3 世界遺産検定2級 合格</li>
-    <li>2026/4 AWS Certified Solutions Architect - Associate</li>
-    <li>2026/4 AWS Certified Developer - Associate</li>
+    <li>2026/4 AWS Certified Solutions Architect - Associate 取得</li>
+    <li>2026/4 AWS Certified Developer - Associate 取得</li>
   </ul>
 </section>
 
